@@ -21,28 +21,38 @@ public class SearchResult extends AppCompatActivity {
     private Button homeButton;
     private TextView storesFound;
     private ListView srList;
+    private String SearchString;
     DatabaseHelper mDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_search_result );
+        SearchString=getIntent().getStringExtra( "srText" );
 
         mDatabaseHelper = new DatabaseHelper(this,null,null,1);
 
         homeButton=(Button)findViewById( R.id.sr_home_button );
-        storesFound=(TextView)findViewById( R.id.sr_stores_found );
+        //storesFound=(TextView)findViewById( R.id.sr_stores_found );
         srList=(ListView) findViewById( R.id.sr_listview );
 
         populateListView();
+
+        homeButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(SearchResult.this,menu1.class);
+                startActivity(i2);
+            }
+        } );
 
     }
 
     private void populateListView() {
 
-        ArrayList<String> listData = new ArrayList<>();
+        final ArrayList<String> listData = new ArrayList<>();
 
-        Cursor data = mDatabaseHelper.getData();
+        Cursor data = mDatabaseHelper.search(SearchString);
 
         while(data.moveToNext()){
             //get the value from the database in column 1
@@ -57,12 +67,11 @@ public class SearchResult extends AppCompatActivity {
         srList.setOnItemClickListener( new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(SearchResult.this,innerSR.class);
+                Intent i = new Intent(SearchResult.this,ProductList.class);
+                i.putExtra( "product",listData.get(position) );
                 startActivity(i);
             }
         } );
-
-
 
     }
 

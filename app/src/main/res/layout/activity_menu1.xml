@@ -54,73 +54,67 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_toEndOf="@+id/main2_search_input"
+            android:background="@color/colorPrimaryDark"
             android:text="Search"
+            android:textColor="@android:color/background_light"
             android:textSize="12sp" />
 
         <ImageView
-            android:id="@+id/main1_image2"
+            android:id="@+id/men2"
             android:layout_width="150dp"
             android:layout_height="89dp"
-            android:layout_alignTop="@+id/main2_image1"
+            android:layout_alignTop="@+id/men1"
             android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@+id/main2_image1"
-            app:srcCompat="@drawable/sample" />
+            android:layout_toEndOf="@+id/men1"
+            android:alpha="1"
+            app:srcCompat="@drawable/img2" />
 
         <ImageView
-            android:id="@+id/main2_image1"
+            android:id="@+id/men1"
             android:layout_width="150dp"
             android:layout_height="89dp"
             android:layout_alignStart="@+id/main2_search_input"
             android:layout_below="@+id/main2_search_input"
             android:layout_marginTop="20dp"
+            android:alpha="1"
             app:srcCompat="@drawable/sample" />
 
         <ImageView
-            android:id="@+id/image2"
+            android:id="@+id/men6"
             android:layout_width="150dp"
             android:layout_height="89dp"
-            android:layout_below="@+id/main1_image2"
+            android:layout_below="@+id/men2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/main1_image2"
-            app:srcCompat="@drawable/sample" />
+            android:layout_toEndOf="@+id/men2"
+            app:srcCompat="@drawable/juice" />
 
         <ImageView
-            android:id="@+id/image3"
+            android:id="@+id/men5"
             android:layout_width="150dp"
             android:layout_height="89dp"
-            android:layout_alignStart="@+id/main1_image2"
-            android:layout_below="@+id/main1_image2"
+            android:layout_alignStart="@+id/men2"
+            android:layout_below="@+id/men2"
             android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/sample" />
+            app:srcCompat="@drawable/desserts" />
 
         <ImageView
-            android:id="@+id/image4"
+            android:id="@+id/men4"
             android:layout_width="150dp"
             android:layout_height="89dp"
             android:layout_alignStart="@+id/main2_search_input"
-            android:layout_below="@+id/main1_image2"
+            android:layout_below="@+id/men2"
             android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/sample" />
+            app:srcCompat="@drawable/healthy" />
 
         <ImageView
-            android:id="@+id/image5"
+            android:id="@+id/men3"
             android:layout_width="150dp"
             android:layout_height="89dp"
-            android:layout_alignTop="@+id/main1_image2"
+            android:layout_alignTop="@+id/men2"
             android:layout_marginLeft="10dp"
-            android:layout_toEndOf="@+id/main1_image2"
-            app:srcCompat="@drawable/sample" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/main2_search_input"
-            android:layout_alignTop="@+id/main1_image2"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:layout_toEndOf="@+id/men2"
+            app:srcCompat="@drawable/img3" />
 
     </RelativeLayout>
 </RelativeLayout>

@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lsdfhio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchResult">
+    tools:context=".AllProducts">
 
     <LinearLayout
-        android:id="@+id/sr_linearLayout"
+        android:id="@+id/adbjbkjad"
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_alignParentStart="true"
@@ -16,7 +17,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView11"
             android:layout_width="201dp"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
@@ -28,32 +29,22 @@
             android:textSize="24sp" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/sr_mainLayout"
-        android:layout_width="467dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/sr_linearLayout">
-
-        <ListView
-            android:id="@+id/sr_listview"
-            android:layout_width="442dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/sr_home_button"
-        android:layout_width="74dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="312dp"
+        android:layout_height="298dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/sr_mainLayout"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="HOME"
-        android:textColor="@android:color/background_light"
-        android:textSize="10sp" />
+        android:layout_marginLeft="40dp"
+        app:srcCompat="@drawable/healthy" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="119dp"
+        android:text="TextView" />
 
 </RelativeLayout>

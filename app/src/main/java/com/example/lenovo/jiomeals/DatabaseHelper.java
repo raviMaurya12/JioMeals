@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getData(){
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT DISTINCT * FROM "+ TABLE_NAME +" WHERE Type='Burger'";  //Change burger later
+        String query = "SELECT DISTINCT (Restaurant) FROM "+ TABLE_NAME +" WHERE Type='Burger'";  //Change burger later
         Cursor data = db.rawQuery(query, null);
         Log.d(TAG, data.toString());
         return data;
@@ -54,4 +54,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return data;
     }
 
+    public Cursor search(String str){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT DISTINCT * FROM "+ TABLE_NAME +" WHERE Title LIKE '"+str+"'"+ " OR Type LIKE '"+str+"'";  //Change burger later
+
+        Cursor data = db.rawQuery(query, null);
+        return data;
+    }
+
+    public Cursor getProduct(String product) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT  * FROM "+ TABLE_NAME +" WHERE Restaurant LIKE '"+product+"'";  //Change burger later
+
+        Cursor data = db.rawQuery(query, null);
+        return data;
+    }
 }
