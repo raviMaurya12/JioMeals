@@ -1,5 +1,6 @@
 package com.example.lenovo.jiomeals;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,8 @@ public class menu2 extends AppCompatActivity {
         menu2Image1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent srIntent=new Intent(menu2.this,SearchResult.class);
+                startActivity(srIntent);
             }
         } );
     }
