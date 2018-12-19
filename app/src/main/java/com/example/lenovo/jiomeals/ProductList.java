@@ -1,3 +1,5 @@
+//This Page Is Isolated because It has some bugs.
+
 package com.example.lenovo.jiomeals;
 
 import android.content.Intent;
